@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Learning</string>
+    <string name="cat_noise">Noise</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="welcome_text">Welcome To New Activity</string>
+    <string name="details_activity">Details Activity</string>
+    <string name="go_back">Go Back</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_next">NextActivity</string>
+    <string name="welcome_to_next_activity">Welcome To Next Activity</string>
+    <string name="open_custom">open Custom</string>
+    <string name="open_constant_activity">Open Constant Activity</string>
+    <string name="constant">Constant</string>
+    <string name="volley">Volley</string>
+</resources>
