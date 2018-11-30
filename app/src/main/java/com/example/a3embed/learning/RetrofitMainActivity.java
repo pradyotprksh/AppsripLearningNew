@@ -23,6 +23,23 @@ public class RetrofitMainActivity extends AppCompatActivity {
         mAPIService = ApiUtils.getAPIService();
         apiResponse = findViewById(R.id.apiResponse);
 
+//        try {
+//            Response<MessageDataModelRetro> response = mAPIService.savePost(1,"1","1").execute();
+//            if (response.isSuccessful()) {
+//                MessageDataModelRetro msgData = response.body();
+//                String message = msgData.getMessage();
+//                DataModelRetro data = response.body().getData();
+//                String token = data.getToken();
+//                String sid = data.getSid();
+//                String type = data.getType();
+//
+//                String responseValue = "Status: " + message + "\nData:\nToken Values: " + token + "\n\nSID value: " + sid + "\n\nType Value: " + type;
+//                apiResponse.setText(responseValue);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
         mAPIService.savePost(112, "q", "q").enqueue(new Callback<MessageDataModelRetro>() {
             @Override
             public void onResponse(Call<MessageDataModelRetro> call, Response<MessageDataModelRetro> response) {

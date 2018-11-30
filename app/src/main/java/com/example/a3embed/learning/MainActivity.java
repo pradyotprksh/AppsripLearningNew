@@ -11,9 +11,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyActivity";
-    private Button detailsActivity, intentSendData, apiCall;
-    private TextView catNoise, dogNoise, dogNoise1, dogNoise2, cowValue;
-    private Thread t1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate() method called");
 
-        catNoise = findViewById(R.id.catValue);
-        dogNoise = findViewById(R.id.dogValue);
-        dogNoise1 = findViewById(R.id.dogValue2);
-        dogNoise2 = findViewById(R.id.dogValue3);
-        cowValue = findViewById(R.id.cowValue);
-        apiCall = findViewById(R.id.apiCall);
+        TextView catNoise = findViewById(R.id.catValue);
+        TextView dogNoise = findViewById(R.id.dogValue);
+        TextView dogNoise1 = findViewById(R.id.dogValue2);
+        TextView dogNoise2 = findViewById(R.id.dogValue3);
+        TextView cowValue = findViewById(R.id.cowValue);
+        Button apiCall = findViewById(R.id.apiCall);
 
-        detailsActivity = findViewById(R.id.detailsActivity);
+        Button detailsActivity = findViewById(R.id.detailsActivity);
 
-        intentSendData = findViewById(R.id.intentSendData);
+        Button intentSendData = findViewById(R.id.intentSendData);
 
         CatClass catOne = new CatClass(5, "Stuart");
         String catDetails = "Cat 1: " + catOne.makeSound();
@@ -64,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        t1 = new Thread(new DetailsActivity());
+        Thread t1 = new Thread(new DetailsActivity());
         t1.start();
 
         intentSendData.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d(TAG, "onRestoreInstanceState() method called " + savedInstanceState);
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume() method called");
@@ -108,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause() method called");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(TAG, "onSaveInstanceState() method called " + outState);
     }
 
     @Override
