@@ -36,9 +36,17 @@
         <activity
             android:name=".ConstantActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AsyncActivity"
+        <activity
+            android:name=".AsyncActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".IntentTransferData"
+        <activity
+            android:name=".IntentTransferData"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DownloadImageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrofitMainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

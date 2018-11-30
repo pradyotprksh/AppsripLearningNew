@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyActivity";
-    private Button detailsActivity, intentSendData;
+    private Button detailsActivity, intentSendData, apiCall;
     private TextView catNoise, dogNoise, dogNoise1, dogNoise2, cowValue;
     private Thread t1;
 
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         dogNoise1 = findViewById(R.id.dogValue2);
         dogNoise2 = findViewById(R.id.dogValue3);
         cowValue = findViewById(R.id.cowValue);
+        apiCall = findViewById(R.id.apiCall);
 
         detailsActivity = findViewById(R.id.detailsActivity);
 
@@ -77,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("BundleValue2", "This is a bundle value 2");
                 bundle.putString("BundleValue3", "This is a bundle value 3");
                 intent.putExtra("Bundle1", bundle);
+                startActivity(intent);
+            }
+        });
+
+        apiCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RetrofitMainActivity.class);
                 startActivity(intent);
             }
         });

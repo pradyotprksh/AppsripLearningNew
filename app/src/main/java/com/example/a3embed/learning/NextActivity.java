@@ -45,6 +45,7 @@ public class NextActivity extends AppCompatActivity implements ClickInterface, N
             public void onClick(View v) {
                 Intent intent = new Intent(NextActivity.this, ConstantActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         getString();

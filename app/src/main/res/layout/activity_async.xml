@@ -13,18 +13,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="12dp"
         android:background="@color/design_default_color_primary"
-        android:text="Run Async task"
+        android:text="Download Image and Show"
         android:textColor="@android:color/white" />
 
-    <ImageView
-        android:id="@+id/asyncTaskImage"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <Button
+        android:id="@+id/dwnImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/btn_run"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:background="@color/colorPrimary"
+        android:text="Download Image and Save"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

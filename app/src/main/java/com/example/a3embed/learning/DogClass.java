@@ -1,9 +1,13 @@
 package com.example.a3embed.learning;
 
+import android.view.View;
+import android.view.ViewGroup;
+
 public class DogClass extends AnimalClass {
 
     int age;
     String name;
+
 
     DogClass(int age, String name) {
         this.age = age;
